@@ -1,0 +1,32 @@
+@charset "UTF-8";
+:root{
+    --main: #01BBC8;
+    --accent: #02C6C4;
+    --sub: #C2DBD8;
+    --base: #EFF0F4;
+    --shell: #E8DEDC;
+    --title:"IBM Plex Serif", serif;
+    --body:"IBM Plex Serif","Noto Serif JP", serif;
+}
+
+body{
+    background: linear-gradient( to right ,#02C6C4, #EFF0F4
+    );
+}
+
+h1{
+    position: relative;
+    top: 0;
+    height: 60px;
+    margin-inline: calc(50% - 50vw);
+    margin-top: 0;
+    background-color: white;
+    img{
+        position: absolute;
+        top: -8px;
+        left: -20px;
+        width: 200px;
+        height: 80px;
+        object-fit: cover;
+    }
+}
