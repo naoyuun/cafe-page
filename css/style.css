@@ -1,27 +1,27 @@
 @charset "UTF-8";
-:root{
-    --main: #01BBC8;
-    --accent: #02C6C4;
-    --sub: #C2DBD8;
-    --base: #EFF0F4;
-    --shell: #E8DEDC;
-    --title:"IBM Plex Serif", serif;
-    --body:"IBM Plex Serif","Noto Serif JP", serif;
+:root {
+    --main: #01bbc8;
+    --accent: #02c6c4;
+    --sub: #c2dbd8;
+    --base: #eff0f4;
+    --shell: #e8dedc;
+    --title: "IBM Plex Serif", serif;
+    --body: "IBM Plex Serif", "Noto Serif JP", serif;
 }
 
-body{
-    background: linear-gradient( to right ,#02C6C4, #EFF0F4
-    );
+body {
+    background: linear-gradient(to right, #02c6c4, #eff0f4);
+    font-family: var(--body);
 }
 
-h1{
+h1 {
     position: relative;
     top: 0;
     height: 60px;
     margin-inline: calc(50% - 50vw);
     margin-top: 0;
     background-color: white;
-    img{
+    img {
         position: absolute;
         top: -8px;
         left: -20px;
@@ -29,4 +29,189 @@ h1{
         height: 80px;
         object-fit: cover;
     }
+}
+
+h2,
+h3 {
+    color: white;
+    font-family: var(--title);
+}
+h2 {
+    text-align: center;
+    margin: 32px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.448);
+}
+
+/*menuのtable grid*/
+
+.menu-h3 {
+    font-size: 1.5rem;
+    line-height: 26px;
+    text-indent: 1rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.448);
+    border-bottom: 2px solid white;
+    margin-bottom: 8px;
+}
+
+.dlink-item,
+.sweets-item {
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.448);
+    margin: 8px;
+    img {
+        aspect-ratio: 2 / 3;
+    }
+}
+figcaption {
+    height: 70px;
+    text-align: right;
+    background-color: var(--base);
+    padding-right: 0.5rem;
+}
+
+table {
+    font-weight: bold;
+    color: #007881;
+    /* 半透明 */
+    background: rgba(255, 255, 255, 0.252);
+
+    /* 背景をぼかす */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* ガラスの縁 */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    /* 柔らかい影 */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+    border-radius: 20px;
+}
+
+.main-sweets,
+.main-dlink {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.main-section2-table,
+.main-section3-table {
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.section2-table_item,
+.section3-table_item {
+    text-align: center;
+    padding: 8px;
+}
+
+.main-section2-p {
+    margin: 8px;
+    text-indent: 0.5rem;
+}
+
+.menu-3-p{
+    text-align: right;
+    margin-right: 8px;
+}
+.lunch-item{
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.448);
+    margin: 8px;
+    margin-bottom: 16px;
+}
+
+.menu-p{
+    margin: 8px;
+}
+
+/*footer*/
+
+.footer{
+    margin-inline: calc(50% - 50vw);
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.35) 1px, transparent 2px),
+        radial-gradient(circle at 80% 60%, rgba(0,0,0,.03) 1px, transparent 2px),
+        linear-gradient(
+            180deg,
+            #fdfcf9,
+            #f7f2ea,
+            #e8dedc
+        );
+
+    background-size:
+        30px 30px,
+        40px 40px,
+        cover;
+
+}
+
+.footer-botton{   
+    margin: 16px;
+    img{
+        margin-inline: auto ;
+}
+}
+
+/*アニメーション*/
+
+.fadeUp {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+
+.fadeUp.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-section,
+.main-section2,
+.main-section3{
+    position: relative;
+    overflow: hidden;
+}
+
+.main-section::before,
+.main-section2::before,
+.main-section3::before{
+
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.3),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:shine 8s infinite;
+}
+
+@keyframes shine{
+
+0%{
+left:-120%;
+}
+
+20%{
+left:130%;
+}
+
+100%{
+left:130%;
+}
+
 }

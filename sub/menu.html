@@ -4,108 +4,137 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pearl Tide Cafe</title>
+        <link rel="icon" href="../img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300&family=Noto+Serif+JP&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
         <header>
             <h1><img src="../img/logo.webp" alt="logo" width="200px" /></h1>
             <!--ハンバーガ　ナビ追加-->
         </header>
-        <main>
+        <main class="main">
             <h2>MENU</h2>
-            <section>
-                <h3>sweets</h3>
-                <div>
-                    <figure>
-                        <img src="../img/cake.webp" alt="cake" />
-                        <figcaption>レアチーズケーキ <br />￥780</figcaption>
+            <section class="main-section fadeUp">
+                <h3 class="menu-h3">sweets</h3>
+                <div class="main-sweets">
+                    <figure class="sweets-item">
+                        <img src="../img/cake.webp" alt="cake" class="sweets-img" />
+                        <figcaption class="sweets-caption">
+                            レアチーズケーキ <br /><br />￥780
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="../img/pafe.webp" alt="pafe" />
-                        <figcaption>マーメイドパフェ <br />￥1280</figcaption>
+                    <figure class="sweets-item">
+                        <img src="../img/pafe.webp" alt="pafe" class="sweets-img" />
+                        <figcaption class="sweets-caption">
+                            マーメイドパフェ <br /><br />￥1280
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="../img/pancake.webp" alt="pancake" />
-                        <figcaption>パールシュガーパンケーキ <br />￥1280</figcaption>
+                    <figure class="sweets-item">
+                        <img src="../img/pancake.webp" alt="pancake" class="sweets-img" />
+                        <figcaption class="sweets-caption">
+                            パールシュガー <br />パンケーキ <br />￥1280
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="../img/serie.webp" alt="serie" />
-                        <figcaption>バブルゼリー <br />￥780</figcaption>
+                    <figure class="sweets-item">
+                        <img src="../img/serie.webp" alt="serie" class="sweets-img" />
+                        <figcaption class="sweets-caption">
+                            バブルゼリー <br /><br />￥780
+                        </figcaption>
                     </figure>
                 </div>
             </section>
-            <section>
-                <h3>dlink</h3>
-                <div>
-                    <figure>
-                        <img src="../img/juice.webp" alt="juice" />
-                        <figcaption>グレープフルーツジュース <br />￥580</figcaption>
+            <section class="main-section2 fadeUp">
+                <h3 class="menu-h3">drink</h3>
+                <div class="main-dlink">
+                    <figure class="dlink-item">
+                        <img src="../img/juice.webp" alt="juice" class="dlink-img" />
+                        <figcaption class="dlink-caption">
+                            グレープフルーツ <br />ジュース <br />￥580
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="../img/soda.webp" alt="soda" />
-                        <figcaption>クリームソーダ <br />￥980</figcaption>
+                    <figure class="dlink-item">
+                        <img src="../img/soda.webp" alt="soda" class="dlink-img" />
+                        <figcaption class="dlink-caption">
+                            クリームソーダ <br /><br />￥980
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="../img/tea.webp" alt="tea" />
-                        <figcaption>バタフライティー <br />￥980</figcaption>
+                    <figure class="dlink-item">
+                        <img src="../img/tea.webp" alt="tea" class="dlink-img" />
+                        <figcaption class="dlink-caption">
+                            バタフライティー <br /><br />￥980
+                        </figcaption>
                     </figure>
-                    <figure>
-                        <img src="../img/frappe.webp" alt="frappe" />
-                        <figcaption>ブルーベリーフラッペ <br />￥980</figcaption>
+                    <figure class="dlink-item">
+                        <img src="../img/frappe.webp" alt="frappe" class="dlink-img" />
+                        <figcaption class="dlink-caption">
+                            ブルーベリー <br />フラッペ <br />￥980
+                        </figcaption>
                     </figure>
                 </div>
-                <table>
-                    <caption>
-                        その他
-                    </caption>
-                    <tr>
-                        <th>コーヒー（ice/hot）</th>
-                        <td>￥580</td>
-                        <th>カフェオレ（ice/hot）</th>
-                        <td>￥680</td>
+                <table class="main-section2-table">
+                    <tr class="section2-table-tr">
+                        <th class="section2-table_item">コーヒー（ice/hot）</th>
+                        <td class="section2-table_item">￥580</td>
+                        <th class="section2-table_item">カフェオレ（ice/hot）</th>
+                        <td class="section2-table_item">￥680</td>
                     </tr>
-                    <th>紅茶 <br />（ice/hot）</th>
-                    <td>￥680</td>
-                    <th>ミルクティー（ice/hot）</th>
-                    <td>￥780</td>
+                    <tr>
+                        <th class="section2-table_item">紅茶 <br />（ice/hot）</th>
+                        <td class="section2-table_item">￥680</td>
+                        <th class="section2-table_item">ミルクティー（ice/hot）</th>
+                        <td class="section2-table_item">￥780</td>
+                    </tr>
                 </table>
-                <p>紅茶はアールグレイ、アッサムからお選びいただけます</p>
+                <p class="main-section2-p">紅茶はアールグレイ、アッサムからお選びいただけます</p>
             </section>
-            <section>
-                <h3>lunch</h3>
-                <p>12:00~15:00</p>
-                <div>
-                    <figure>
-                        <img src="../img/lunch.webp" alt="lunch" />
-                        <figcaption>
-                            パスタ、リゾット、ガレットからお選びください
+            <section  class="main-section3 fadeUp">
+                <h3 class="menu-h3">lunch</h3>
+                <p class="menu-3-p">12:00~15:00</p>
+                <div class="main-lunch">
+                    <figure class="lunch-item">
+                        <img src="../img/lunch.webp" alt="lunch"  class="lunch-img"/>
+                        <figcaption class="lunch-caption">
+                            パスタ、リゾット、ガレット
+                            <br>からお選びください
                             <br />￥1980~
                         </figcaption>
                     </figure>
-                    <table>
-                        <tr>
-                            <td>￥1980</td>
-                            <td>コーヒー、紅茶、ジュース</td>
+                    <table class="main-section3-table">
+                        <tr class="section3-table-tr">
+                            <td class="section3-table_item">￥1980</td>
+                            <td class="section3-table_item">コーヒー、紅茶、ジュース</td>
                         </tr>
-                        <tr>
-                            <td>￥2080</td>
-                            <td>カフェオレ、ミルクティー</td>
+                        <tr class="section3-table-tr">
+                            <td class="section3-table_item">￥2080</td>
+                            <td class="section3-table_item">カフェオレ、ミルクティー</td>
                         </tr>
-                        <tr>
-                            <td>￥2200</td>
-                            <td>クリームソーダ、 バタフライティー、ブルーベリーフラッペ</td>
+                        <tr class="section3-table-tr">
+                            <td class="section3-table_item">￥2200</td>
+                            <td class="section3-table_item">クリームソーダ、 バタフライティー、ブルーベリーフラッペ</td>
                         </tr>
                     </table>
                 </div>
             </section>
-            <p>
+            <p class="menu-p">
                 ドリンクのみテイクアウト有
                 <br />※バタフライティーはポットでお渡しします。
                 <br />テイクアウトの際は￥780となります。
             </p>
         </main>
-        <footer>
-            <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
+        <footer class="footer">
+            <a href="#" class="footer-botton">
+                <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
+            </a>
             <p>&copy;Pearl Tide Cafe-HP</p>
         </footer>
+        <script src="../script.js"></script>
     </body>
 </html>
