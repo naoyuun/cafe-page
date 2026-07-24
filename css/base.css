@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-:root {
+/* :root {
     --main-color: #fff7f0;
     --base-color: rgb(226, 209, 183);
     --sub-color: #000097;
@@ -8,7 +8,7 @@
     --text-color: rgb(45, 19, 1);
     --heading-font: "Playwrite NZ", "Roboto", "Yuji Boku", serif;
     --body-font: "robot", "Zen Kurenaido", sans-serif;
-}
+} */
 
 body {
     width: calc(100% - 20px);
@@ -16,11 +16,11 @@ body {
     font-family: var(--body-font);
 }
 /*文字サイズなど*/
-h1,
+/* h1,
 h2,
 h3 {
     font-family: var(--heading-font);
-}
+} */
 h1 {
     font-size: clamp(2rem, 0.5rem + 2.5vw, 3rem);
 }

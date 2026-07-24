@@ -16,109 +16,128 @@
         <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
-        <header>
-            <h1><img src="../img/logo.webp" alt="logo" width="200px" /></h1>
-            <!--ハンバーガ　ナビ追加-->
+        <header class="header">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <img src="../img/logo.webp" alt="logo" />
+                </h1>
+                <!--ハンバーガ　ナビ追加-->
+                <button class="header__hamburger" aria-label="メニュー">
+                    <img src="../img/icon.webp" alt="ocon" />
+                </button>
+            </div>
+            <nav class="header__nav">
+                <a href="../index.html">Top</a>
+                <a href="#sweets">Sweets</a>
+                <a href="#drinks">Drinks</a>
+                <a href="#lunch">Lunch</a>
+
+                <!-- 泡 -->
+                <span class="header__bubble header__bubble--1"></span>
+                <span class="header__bubble header__bubble--2"></span>
+                <span class="header__bubble header__bubble--3"></span>
+            </nav>
         </header>
         <main class="main">
             <h2>MENU</h2>
-            <section class="main-section fadeUp">
-                <h3 class="menu-h3">sweets</h3>
-                <div class="main-sweets">
-                    <figure class="sweets-item">
-                        <img src="../img/cake.webp" alt="cake" class="sweets-img" />
-                        <figcaption class="sweets-caption">
+            <section class="menu__section menu__section--sweets fadeUp">
+                <h3 class="menu-title" id="sweets">sweets</h3>
+                <div class="menu-grid">
+                    <figure class="sweets__item menu-card">
+                        <img src="../img/cake.webp" alt="cake" class="sweets__img" />
+                        <figcaption class="menu-card__caption">
                             レアチーズケーキ <br /><br />￥780
                         </figcaption>
                     </figure>
-                    <figure class="sweets-item">
-                        <img src="../img/pafe.webp" alt="pafe" class="sweets-img" />
-                        <figcaption class="sweets-caption">
+                    <figure class="sweets__item menu-card">
+                        <img src="../img/pafe.webp" alt="pafe" class="sweets__img" />
+                        <figcaption class="menu-card__caption">
                             マーメイドパフェ <br /><br />￥1280
                         </figcaption>
                     </figure>
-                    <figure class="sweets-item">
-                        <img src="../img/pancake.webp" alt="pancake" class="sweets-img" />
-                        <figcaption class="sweets-caption">
+                    <figure class="sweets__item menu-card">
+                        <img src="../img/pancake.webp" alt="pancake" class="sweets__img" />
+                        <figcaption class="menu-card__caption">
                             パールシュガー <br />パンケーキ <br />￥1280
                         </figcaption>
                     </figure>
-                    <figure class="sweets-item">
-                        <img src="../img/serie.webp" alt="serie" class="sweets-img" />
-                        <figcaption class="sweets-caption">
+                    <figure class="sweets__item menu-card">
+                        <img src="../img/serie.webp" alt="serie" class="sweets__img" />
+                        <figcaption class="menu-card__caption">
                             バブルゼリー <br /><br />￥780
                         </figcaption>
                     </figure>
                 </div>
             </section>
-            <section class="main-section2 fadeUp">
-                <h3 class="menu-h3">drink</h3>
-                <div class="main-dlink">
-                    <figure class="dlink-item">
-                        <img src="../img/juice.webp" alt="juice" class="dlink-img" />
-                        <figcaption class="dlink-caption">
+            <section class="menu__section menu__section--drink fadeUp">
+                <h3 class="menu-title" id="drinks">drink</h3>
+                <div class="menu-grid">
+                    <figure class="drink__item menu-card">
+                        <img src="../img/juice.webp" alt="juice" class="drink__img" />
+                        <figcaption class="menu-card__caption">
                             グレープフルーツ <br />ジュース <br />￥580
                         </figcaption>
                     </figure>
-                    <figure class="dlink-item">
-                        <img src="../img/soda.webp" alt="soda" class="dlink-img" />
-                        <figcaption class="dlink-caption">
+                    <figure class="drink__item menu-card">
+                        <img src="../img/soda.webp" alt="soda" class="drink__img" />
+                        <figcaption class="menu-card__caption">
                             クリームソーダ <br /><br />￥980
                         </figcaption>
                     </figure>
-                    <figure class="dlink-item">
-                        <img src="../img/tea.webp" alt="tea" class="dlink-img" />
-                        <figcaption class="dlink-caption">
+                    <figure class="drink__item menu-card">
+                        <img src="../img/tea.webp" alt="tea" class="drink__img" />
+                        <figcaption class="menu-card__caption">
                             バタフライティー <br /><br />￥980
                         </figcaption>
                     </figure>
-                    <figure class="dlink-item">
-                        <img src="../img/frappe.webp" alt="frappe" class="dlink-img" />
-                        <figcaption class="dlink-caption">
+                    <figure class="drink__item menu-card">
+                        <img src="../img/frappe.webp" alt="frappe" class="drink__img" />
+                        <figcaption class="menu-card__caption">
                             ブルーベリー <br />フラッペ <br />￥980
                         </figcaption>
                     </figure>
                 </div>
-                <table class="main-section2-table">
+                <table class="menu-table">
                     <tr class="section2-table-tr">
-                        <th class="section2-table_item">コーヒー（ice/hot）</th>
-                        <td class="section2-table_item">￥580</td>
-                        <th class="section2-table_item">カフェオレ（ice/hot）</th>
-                        <td class="section2-table_item">￥680</td>
+                        <th class="menu-table__item">コーヒー（ice/hot）</th>
+                        <td class="menu-table__item">￥580</td>
+                        <th class="menu-table__item">カフェオレ（ice/hot）</th>
+                        <td class="menu-table__item">￥680</td>
                     </tr>
                     <tr>
-                        <th class="section2-table_item">紅茶 <br />（ice/hot）</th>
-                        <td class="section2-table_item">￥680</td>
-                        <th class="section2-table_item">ミルクティー（ice/hot）</th>
-                        <td class="section2-table_item">￥780</td>
+                        <th class="menu-table__item">紅茶 <br />（ice/hot）</th>
+                        <td class="menu-table__item">￥680</td>
+                        <th class="menu-table__item">ミルクティー（ice/hot）</th>
+                        <td class="menu-table__item">￥780</td>
                     </tr>
                 </table>
                 <p class="main-section2-p">紅茶はアールグレイ、アッサムからお選びいただけます</p>
             </section>
-            <section  class="main-section3 fadeUp">
-                <h3 class="menu-h3">lunch</h3>
+            <section class="menu__section menu__section--lunch fadeUp">
+                <h3 class="menu-title" id="lunch">lunch</h3>
                 <p class="menu-3-p">12:00~15:00</p>
                 <div class="main-lunch">
-                    <figure class="lunch-item">
-                        <img src="../img/lunch.webp" alt="lunch"  class="lunch-img"/>
-                        <figcaption class="lunch-caption">
+                    <figure class="lunch__item menu-card">
+                        <img src="../img/lunch.webp" alt="lunch" class="lunch__img" />
+                        <figcaption class="menu-card__caption">
                             パスタ、リゾット、ガレット
-                            <br>からお選びください
-                            <br />￥1980~
+                            <br />からお選びください <br />￥1980~
                         </figcaption>
                     </figure>
-                    <table class="main-section3-table">
+                    <table class="menu-table">
                         <tr class="section3-table-tr">
-                            <td class="section3-table_item">￥1980</td>
-                            <td class="section3-table_item">コーヒー、紅茶、ジュース</td>
+                            <td class="menu-table__item">￥1980</td>
+                            <td class="menu-table__item">コーヒー、紅茶、ジュース</td>
                         </tr>
                         <tr class="section3-table-tr">
-                            <td class="section3-table_item">￥2080</td>
-                            <td class="section3-table_item">カフェオレ、ミルクティー</td>
+                            <td class="menu-table__item">￥2080</td>
+                            <td class="menu-table__item">カフェオレ、ミルクティー</td>
                         </tr>
                         <tr class="section3-table-tr">
-                            <td class="section3-table_item">￥2200</td>
-                            <td class="section3-table_item">クリームソーダ、 バタフライティー、ブルーベリーフラッペ</td>
+                            <td class="menu-table__item">￥2200</td>
+                            <td class="menu-table__item">
+                                クリームソーダ、 バタフライティー、ブルーベリーフラッペ
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -130,10 +149,10 @@
             </p>
         </main>
         <footer class="footer">
-            <a href="#" class="footer-botton">
+            <a href="#" class="footer__button">
                 <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
             </a>
-            <p>&copy;Pearl Tide Cafe-HP</p>
+            <p class="footer__copy">&copy;Pearl Tide Cafe-HP</p>
         </footer>
         <script src="../script.js"></script>
     </body>
