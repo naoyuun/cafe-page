@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 :root {
-    --main: #01bbc8;
-    --accent: #02c6c4;
+    --main: #007881;
+    --base: #02c6c4;
     --sub: #c2dbd8;
     --base: #eff0f4;
     --shell: #e8dedc;
@@ -19,7 +19,23 @@
 
 body {
     font-family: var(--body);
-    background: linear-gradient(to right, #02c6c4, #eff0f4);
+     background:
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(255,255,255,.5),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,255,255,.25),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #01bbc8,
+            #c2dbd8,
+            #eff0f4
+        );
 }
 
 h1 img {
@@ -82,7 +98,6 @@ h2 {
 .header__hamburger img {
     display: block;
     width: 50px;
-
     border-radius: 50%;
     box-shadow: 2px 2px 6px rgba(38, 76, 85, 0.45);
 
@@ -146,7 +161,7 @@ h2 {
 }
 
 .header__nav a:hover {
-    color: var(--accent);
+    color: var(--base);
     transform: translateX(10px);
 }
 
@@ -229,8 +244,7 @@ h2 {
 
 /* メニューカード共通 */
 
-.menu-card,
-.menu-3-p {
+.menu-card {
     margin: 16px;
     border-radius: 10px;
 
@@ -254,11 +268,15 @@ h2 {
 
 .menu-p {
     margin: 8px;
+
+    color: #007881;
 }
 
 .menu-3-p {
     text-align: right;
     margin-right: 8px;
+
+    color: var(--main);
 }
 
 @keyframes float {
@@ -432,3 +450,4 @@ h2 {
         left: 130%;
     }
 }
+
