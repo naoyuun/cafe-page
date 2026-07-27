@@ -14,16 +14,69 @@
         <link rel="stylesheet" href="css/reset.css" />
         <!-- <link rel="stylesheet" href="css/base.css" /> -->
         <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
     </head>
-    <body>
-        <header>
-                <h1><img src="img/ChatGPT Image 2026年7月21日 14_04_51.png" alt=""></h1>
+    <body class="home">
+        <header class="header">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <img src="../img/logo.webp" alt="logo" />
+                </h1>
+                <!--ハンバーガ　ナビ追加-->
+                <button class="header__hamburger" aria-label="メニュー">
+                    <img src="../img/icon.webp" alt="ocon" />
+                </button>
+            </div>
+            <nav class="header__nav">
+                <a href="#information">Infor Mation</a>
+                <a href="#shopmood">Shop Mood</a>
+                <a href="#gift">Gift</a>
+                <a href="sub/menu.html">Menu</a>
+
+                <!-- 泡 -->
+                <span class="header__bubble header__bubble--1"></span>
+                <span class="header__bubble header__bubble--2"></span>
+                <span class="header__bubble header__bubble--3"></span>
+            </nav>
         </header>
         <main>
+            <section class="fv">
+                <div class="swiper fv__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/in.webp" alt="" />
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="img/accessories.webp" alt="" />
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="img/menu.webp" alt="" />
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="img/gift.webp" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fv__text">
+                    <h1>Pearl Tide Cafe</h1>
+                    <p>Scroll to explore</p>
+                </div>
+            </section>
         </main>
-        <footer>
-            <img src="img/icons8-インスタグラム-48.png" alt="" />
+        <footer class="footer">
+            <a href="#" class="footer__button">
+                <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
+            </a>
+            <p class="footer__copy">&copy;Pearl Tide Cafe-HP</p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

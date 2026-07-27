@@ -17,3 +17,21 @@ const menu = document.querySelector(".header__nav");
 hamburger.addEventListener("click", () => {
     menu.classList.toggle("open");
 });
+
+/*header home*/
+/*swiper */
+const swiper = new Swiper(".swiper", {
+    effect: "fade",
+    loop: true,
+
+    speed: 1200,
+
+    fadeEffect: {
+        crossFade: true,
+    },
+
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+});
