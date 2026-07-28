@@ -86,10 +86,6 @@ h2 {
 
     cursor: pointer;
     opacity: 0.8;
-
-    @media screen and (width >=768px) {
-        opacity: 0;
-    }
 }
 
 .header__hamburger img {
@@ -139,10 +135,6 @@ h2 {
     transform: translateY(-20px) scale(0.96);
 
     transition: 0.45s;
-
-    @media screen and (width >=768px) {
-        opacity: 0;
-    }
 }
 
 .header__nav.open {
@@ -516,6 +508,7 @@ h2 {
     position: relative;
     width: 100vw;
     height: 700px;
+
     margin-inline: calc(50% - 50vw);
     overflow: hidden;
 }
@@ -549,12 +542,21 @@ h2 {
 
 .fv__text {
     position: absolute;
-    inset: 0;
     display: grid;
+    inset: 0;
     place-content: center;
-    color: white;
-    text-align: center;
     z-index: 10;
+
+    color: white;
+
+    text-align: center;
+    text-shadow: 2px 2px 2px #006b73;
+
+    img {
+        width: 50px;
+        margin-inline: auto;
+        margin-top: 16px;
+    }
 }
 
 .fv__text {
@@ -573,4 +575,159 @@ h2 {
     100% {
         transform: translateY(0) rotate(0deg);
     }
+}
+
+/*insetで中にシャドウ*/
+.concept-box {
+    position: relative;
+    height: 300px;
+    width: 300px;
+
+    padding: 30px;
+    padding-top: 70px;
+    margin-top: 48px;
+    margin-inline: auto;
+
+    line-height: 1.8;
+    background: var(--accent);
+    border-radius: 100vmax;
+
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
+
+    img {
+        position: absolute;
+        bottom: -10px;
+        right: -16px;
+
+        width: 110px;
+
+        border-radius: 100vmax;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/*shop mood*/
+.shop {
+    h2 {
+        margin-bottom: 32px;
+    }
+    img {
+        width: 343px;
+        margin: 16px;
+        margin-inline: auto;
+
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+}
+
+/*gift*/
+.gift{
+    h2 {
+        margin-bottom: 32px;
+    }
+    .gift__flex {
+        display: flex;
+    }
+    .gift__item {
+        margin: 8px;
+        width: 50vw;
+
+        box-shadow: var(--shadow);
+    }
+    .gift__image{
+        aspect-ratio: 1 / 1;
+    }
+    .gift__caption{
+    height: 70px;
+
+    background: var(--page);
+    border-radius: 0 0 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+    }
+    .price {
+    margin-top: auto;
+    margin-right: 0.5rem;
+    align-self: flex-end;
+}
+}
+
+.menu{
+    h2{
+        margin-bottom: 32px;
+        border-bottom: 2px solid #fff;
+
+        line-height: 1.4;
+    }
+    a{
+        text-decoration: none;
+    }
+    .menu__item{
+        box-shadow: var(--shadow);
+    }
+    .menu__caption{
+        height: 46px;
+
+        padding-right: 8px;
+    
+        text-align: right;
+        background: var(--page);
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/*infor mation*/
+.information h2{
+    margin-bottom: 32px;
+}
+.information__list {
+    width: 300px;       /* 高さを固定 */
+    height: 300px;   
+    overflow-y: auto;       /* 縦だけスクロール */
+    overflow-x: hidden;
+
+    padding: 10px;
+    margin-inline: auto;
+
+    background-color: var(--page);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
+
+    img{
+        width: 70vw;
+
+        margin: 8px;
+    }
+
+    article{
+        border-bottom: 1px solid gray;
+    }
+}
+
+.information__list::-webkit-scrollbar {
+    width: 12px;
+}
+
+.information__list::-webkit-scrollbar-track {
+    background: var(--accent);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.information__list::-webkit-scrollbar-thumb {
+    background: rgba(1, 187, 200, .5);
+    border-radius: 999px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.341);
+}
+
+.information__list::-webkit-scrollbar-thumb:hover {
+    background: rgba(1, 187, 200, .8);
+}
+
+.access__info{
+    margin: 48px;
+
+    color: var(--text);
+    
+    dd{margin: 0;}
 }
