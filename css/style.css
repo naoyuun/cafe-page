@@ -24,9 +24,10 @@ body {
         radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.5), transparent 30%),
         radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.25), transparent 25%),
         linear-gradient(135deg, #01bbc8, #c2dbd8, #eff0f4);
+    overflow-x: hidden;
 }
 
-h1 img {
+.header__logo img {
     position: absolute;
     top: -6px;
     left: 4px;
@@ -242,11 +243,12 @@ h2 {
 
 /* メニューカード共通 */
 
+.concept-box img,
 .menu-card {
     margin: 16px;
     border-radius: 10px;
 
-    animation: float 10s ease-in-out infinite;
+    animation: cardfloat 10s ease-in-out infinite;
 
     box-shadow: var(--shadow);
 }
@@ -275,12 +277,6 @@ h2 {
     aspect-ratio: 2/3;
 }
 
-.menu-p {
-    margin: 8px;
-
-    color: var(--text);
-}
-
 .menu-3-p {
     text-align: right;
     margin-right: 8px;
@@ -292,7 +288,7 @@ h2 {
     }
 }
 
-@keyframes float {
+@keyframes cardfloat {
     0%,
     100% {
         transform: translateY(0) rotate(0);
@@ -346,8 +342,6 @@ h2 {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
-    border-radius: 20px;
-
     box-shadow: var(--glass-shadow);
     border-radius: 10px;
 
@@ -383,6 +377,7 @@ h2 {
 .menu-p {
     margin: 8px;
     text-indent: 0.5rem;
+    color: var(--text);
 
     @media screen and (width >=768px) {
         width: 50%;
@@ -397,8 +392,9 @@ h2 {
 
 .footer {
     position: relative;
-    top: 48px;
+    z-index: 10;
 
+    margin-top: 48px;
     margin-inline: calc(50% - 50vw);
 
     background:
@@ -557,13 +553,16 @@ h2 {
         margin-inline: auto;
         margin-top: 16px;
     }
+    p:first-child {
+        font-size: 2em;
+    }
 }
 
 .fv__text {
-    animation: float 5s ease-in-out infinite;
+    animation: textfloat 5s ease-in-out infinite;
 }
 
-@keyframes float {
+@keyframes textfloat {
     0% {
         transform: translateY(0) rotate(0deg);
     }
@@ -596,7 +595,7 @@ h2 {
 
     img {
         position: absolute;
-        bottom: -10px;
+        bottom: -30px;
         right: -16px;
 
         width: 110px;
@@ -622,7 +621,7 @@ h2 {
 }
 
 /*gift*/
-.gift{
+.gift {
     h2 {
         margin-bottom: 32px;
     }
@@ -635,43 +634,44 @@ h2 {
 
         box-shadow: var(--shadow);
     }
-    .gift__image{
+    .gift__image {
         aspect-ratio: 1 / 1;
     }
-    .gift__caption{
-    height: 70px;
+    .gift__caption {
+        height: 70px;
 
-    background: var(--page);
-    border-radius: 0 0 10px 10px;
+        background: var(--page);
+        border-radius: 0 0 10px 10px;
 
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
     .price {
-    margin-top: auto;
-    margin-right: 0.5rem;
-    align-self: flex-end;
-}
+        margin-top: auto;
+        margin-right: 0.5rem;
+        align-self: flex-end;
+    }
 }
 
-.menu{
-    h2{
+.menu {
+    h2 {
         margin-bottom: 32px;
         border-bottom: 2px solid #fff;
 
         line-height: 1.4;
     }
-    a{
+    a {
         text-decoration: none;
     }
-    .menu__item{
+    .menu__item {
+        margin-inline: auto;
         box-shadow: var(--shadow);
     }
-    .menu__caption{
+    .menu__caption {
         height: 46px;
 
         padding-right: 8px;
-    
+
         text-align: right;
         background: var(--page);
         border-radius: 0 0 10px 10px;
@@ -679,13 +679,13 @@ h2 {
 }
 
 /*infor mation*/
-.information h2{
+.information h2 {
     margin-bottom: 32px;
 }
 .information__list {
-    width: 300px;       /* 高さを固定 */
-    height: 300px;   
-    overflow-y: auto;       /* 縦だけスクロール */
+    width: 80%; /* 高さを固定 */
+    height: 300px;
+    overflow-y: auto; /* 縦だけスクロール */
     overflow-x: hidden;
 
     padding: 10px;
@@ -694,13 +694,14 @@ h2 {
     background-color: var(--page);
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
 
-    img{
-        width: 70vw;
-
+    img {
+        width: 60vw;
+        max-width: 400px;
         margin: 8px;
     }
 
-    article{
+    article {
+        margin-bottom: 48px;
         border-bottom: 1px solid gray;
     }
 }
@@ -715,19 +716,87 @@ h2 {
 }
 
 .information__list::-webkit-scrollbar-thumb {
-    background: rgba(1, 187, 200, .5);
+    background: rgba(1, 187, 200, 0.5);
     border-radius: 999px;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.341);
 }
 
 .information__list::-webkit-scrollbar-thumb:hover {
-    background: rgba(1, 187, 200, .8);
+    background: rgba(1, 187, 200, 0.8);
 }
 
-.access__info{
-    margin: 48px;
+.access__info {
+    width: 80%;
+    max-width: 700px;
+
+    padding-left: 0.5rem;
+    margin-inline: auto;
 
     color: var(--text);
-    
-    dd{margin: 0;}
+    text-align: center;
+
+    dd {
+        margin: 0;
+    }
+}
+
+/*PC*/
+@media screen and (width >=768px) {
+    .fv {
+        height: 100vh;
+    }
+    .header__hamburger {
+        display: none;
+    }
+
+    .header__inner {
+        position: fixed;
+        top: 8px;
+        right: 0;
+
+        width: 100vw;
+    }
+    .header__nav {
+        position: fixed;
+        top: 68px;
+        right: 0;
+
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        opacity: 1;
+        transform: none;
+        border-radius: 0;
+
+        padding: 0;
+        margin: 0;
+
+        a {
+            width: 25vw;
+            text-align: center;
+        }
+    }
+
+    .mood__flex {
+        display: flex;
+        max-width: 900px;
+        margin-inline: auto;
+        gap: 40px;
+        img {
+            flex: 1 1 auto;
+            margin: 8px;
+        }
+    }
+    .gift__flex {
+        max-width: 900px;
+        margin: auto;
+        gap: 40px;
+    }
+
+    .menu__item {
+        max-width: 900px;
+    }
+
+    .information__list {
+        max-width: 900px;
+    }
 }

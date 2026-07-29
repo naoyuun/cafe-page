@@ -27,14 +27,14 @@
                 </h1>
                 <!--ハンバーガ　ナビ追加-->
                 <button class="header__hamburger" aria-label="メニュー">
-                    <img src="../img/icon.webp" alt="ocon" />
+                    <img src="img/icon.webp" alt="menu icon" />
                 </button>
             </div>
             <nav class="header__nav">
                 <a href="#shopmood">Shop Mood</a>
                 <a href="#gift">Gift</a>
                 <a href="sub/menu.html">Menu</a>
-                <a href="#information">Infor Mation</a>
+                <a href="#information">Information</a>
 
                 <!-- 泡 -->
                 <span class="header__bubble header__bubble--1"></span>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="fv__text">
-                    <h1>Pearl Tide Cafe</h1>
+                    <p>Pearl Tide Cafe</p>
                     <p>Scroll to explore</p>
                     <img src="img/group_1.webp" alt="" />
                 </div>
@@ -77,8 +77,10 @@
 
             <section class="shop fadeUp" id="shopmood">
                 <h2>Shop mood</h2>
-                <img src="img/in.webp" alt="店内" />
-                <img src="img/out.webp" alt="屋外テラス" />
+                <div class="mood__flex">
+                    <img src="img/in.webp" alt="店内" />
+                    <img src="img/out.webp" alt="屋外テラス" />
+                </div>
             </section>
 
             <section class="gift fadeUp" id="gift">
@@ -105,17 +107,18 @@
 
             <section class="menu fadeUp">
                 <a href="sub/menu.html"><h2>Menu</h2></a>
-                <a href="sub/menu.html"><figure class="menu__item">
-                    <img class="menu__image" src="img/menu.webp" alt="ギフトボックス" />
-                    <figcaption class="menu__caption">
-                        単品　&nbsp;&nbsp;￥1980
-                        <br />セット&nbsp;&nbsp;￥2480
-                    </figcaption>
-                </figure>
-            </a>
+                <a href="sub/menu.html" class="menu__link">
+                    <figure class="menu__item">
+                        <img class="menu__image" src="img/menu.webp" alt="ギフトボックス" />
+                        <figcaption class="menu__caption">
+                            単品　&nbsp;&nbsp;￥1980
+                            <br />セット&nbsp;&nbsp;￥2480
+                        </figcaption>
+                    </figure>
+                </a>
             </section>
 
-            <section class="information">
+            <section class="information" id="information">
                 <h2>Information</h2>
 
                 <div class="information__list">
@@ -155,24 +158,22 @@
 
             <div class="access__info">
                 <dl class="access__list">
-                    <dt class="access__term">Pearl Tide Cafe</dt>
+                    <dt>住所</dt>
+                    <dd>
+                        〒105-0013<br />
+                        東京都港区浜松町1丁目31-31
+                    </dd>
 
-                    <dt class="access__term">住所</dt>
-                    <dd class="access__description">〒105-0013</dd>
-                    <dd class="access__description">東京都港区浜松町1丁目31-31</dd>
-
-                    <dt class="access__term">営業時間</dt>
-                    <dd class="access__description">11:00～22:00</dd>
-
-                    <dt class="access__term">電話番号</dt>
-                    <dd class="access__description">000-0000-0000</dd>
+                    <dt>営業時間</dt>
+                    <dd>11:00～22:00</dd>
                 </dl>
             </div>
+            <p>※このサイトで使われた画像はAIで生成しています</p>
         </main>
 
         <footer class="footer">
             <a href="#" class="footer__button">
-                <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
+                <img src="img/icons8-インスタグラム-48.png" alt="insta" />
             </a>
             <p class="footer__copy">&copy;Pearl Tide Cafe-HP</p>
         </footer>
