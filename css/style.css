@@ -85,6 +85,7 @@ h2 {
     border: none;
     background: none;
 
+    border-radius: 100vmax;
     cursor: pointer;
     opacity: 0.8;
 }
@@ -92,7 +93,7 @@ h2 {
 .header__hamburger img {
     display: block;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 100vmax;
     box-shadow: 2px 2px 6px rgba(38, 76, 85, 0.45);
 
     transition: var(--transition);
@@ -745,8 +746,239 @@ h2 {
     }
 }
 
-/*PC*/
+/*商品ページ*/
+.menu,
+.gifthtml,
+.accessorieshtml {
+    .breadcrumb {
+        margin: 0;
+        background-color: var(--page);
+        margin-inline: calc(50% - 50vw);
+    }
+    h4 {
+        padding: 4px;
+        margin-top: 0;
+
+        color: var(--text);
+        background-color: var(--page);
+        border-radius: 10px;
+
+        font-weight: lighter;
+    }
+
+    .breadcrumb__list {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-indent: 1rem;
+    }
+
+    .breadcrumb__item {
+        font-size: 14px;
+
+        a {
+            font-weight: bold;
+        }
+    }
+
+    /* 区切り記号 */
+    .breadcrumb__item:not(:last-child)::after {
+        content: ">";
+        margin-left: 24px;
+
+        color: black;
+    }
+
+    .breadcrumb__item a {
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .breadcrumb__item a:hover {
+        opacity: 0.7;
+    }
+}
+
+.gifthtml,
+.accessorieshtml {
+    p {
+        text-align: center;
+        margin: 0;
+        background-color: var(--accent);
+        margin-inline: calc(50% - 50vw);
+
+        @media screen and (width >=768px) {
+            margin-top: 96px;
+        }
+    }
+}
+
+.gift-carousel {
+    margin-inline: auto;
+    margin: 8px 4px 0 4px;
+    background: white;
+    overflow: hidden;
+}
+
+.gift-carousel input[type="radio"] {
+    display: none;
+}
+
+.gift-main {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.gift-images {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gift-image {
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gift-thumbnails {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    background: white;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail:hover {
+    border-color: var(--main);
+    transform: scale(1.05);
+}
+
+/* ギャラリースライド制御 */
+#gift1:checked ~ .gift-main .gift-images {
+    transform: translateX(0%);
+}
+#gift2:checked ~ .gift-main .gift-images {
+    transform: translateX(-25%);
+}
+
+/* アクティブサムネイル */
+#gift1:checked ~ .gift-thumbnails label[for="gift1"],
+#gift2:checked ~ .gift-thumbnails label[for="gift2"] {
+    border-color: var(--text);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/*商品内容*/
+.gift__info {
+    padding: 8px;
+    margin-inline: auto;
+    margin: 0 4px 8px 4px;
+
+    background-color: white;
+    color: var(--text);
+
+    border-radius: 0 0 10px 10px;
+    p {
+        padding: 16px 24px;
+
+        background: none;
+        text-align: left;
+    }
+}
+.gift__purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        width: 60%;
+    }
+}
+button {
+    display: block;
+    margin-left: auto;
+
+    color: var(--text2);
+    border: 3px solid #006b73;
+    background-color: #006b73;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.541);
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.gift-expain,
+.gift-spec,
+.gift-kcal {
+    padding: 8px;
+    margin: 16px 4px 4px 4px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    p {
+        width: 100%;
+        padding-left: 32px;
+        background: none;
+        text-align: left;
+    }
+    th {
+        font-weight: lighter;
+        border-bottom: 1px solid;
+    }
+    td {
+        border-bottom: 1px solid gray;
+    }
+}
+
+.gift-kcal {
+    div {
+        display: flex;
+    }
+    table {
+        width: 50%;
+    }
+    th {
+        width: 100px;
+        text-align: left;
+    }
+    td {
+        text-align: right;
+    }
+}
+
+/*タブレット*/
 @media screen and (width >=768px) {
+
+    .home{
+        h2{
+            padding-top: 70px;
+        }
+    }
     .fv {
         height: 100vh;
     }
@@ -799,141 +1031,59 @@ h2 {
     }
 
     .menu__item {
-        max-width: 900px;
+        margin-inline: auto;
+        max-width: 700px;
     }
 
     .information__list {
-        max-width: 900px;
-    }
-}
-
-/*商品ページ*/
-.menu,
-.gifthtml,
-.accessorieshtml{
-    .breadcrumb {
-        margin: 0;
-        background-color: var(--page);
-        margin-inline: calc(50% - 50vw);
+        max-width: 700px;
     }
 
-    .breadcrumb__list {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-indent: 1rem;
-    }
-
-    .breadcrumb__item {
-        font-size: 14px;
-
-        a {
-            font-weight: bold;
+    .menu {
+        h3{
+            padding-top: 70px;
+        }
+        .breadcrumb {
+            margin-top: 96px;
         }
     }
 
-    /* 区切り記号 */
-    .breadcrumb__item:not(:last-child)::after {
-        content: ">";
-        margin-left: 24px;
-
-        color: black;
+    .gift-expain,
+    .gift-spec,
+    .gift-kcal {
+        padding: 16px;
+        p {
+            padding: 0  0 0;
+            margin: 16px;
+            margin-inline: auto;
+        }
+        table{
+            margin-inline: auto;
+        }
     }
 
-    .breadcrumb__item a {
-        color: var(--text);
-        text-decoration: none;
-    }
-
-    .breadcrumb__item a:hover {
-        opacity: 0.7;
+    .gift__info{
+        p{
+            padding: 0 32px;
+            margin: 0 0 24px 0;
+        }
     }
 }
 
-.gifthtml,
-.accessorieshtml{
-    p {
-        text-align: center;
-        margin: 0;
-        background-color: var(--accent);
-        margin-inline: calc(50% - 50vw);
+/*PC*/
+@media screen and (width >=1024px) {
+    .pc-container{
+        display: flex;
     }
-    
-}
+    .pc-item{
+        width: 50%;
+    }
+    .pc-item__1{
+        margin-top: 8px;
 
-.gift-carousel {
-    width: min(95vw , 600px);
-    margin: 8px;
-    margin-inline: auto;
-    background: white;
-    overflow: hidden;
-}
-
-.gift-carousel input[type="radio"] {
-    display: none;
-}
-
-.gift-main {
-    width: 100vw;
-    overflow: hidden;
-}
-
-.gift-images {
-    display: flex;
-    width: 400%;
-    height: 100%;
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.gift-image {
-    width: 25%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gift-thumbnails {
-    display: flex;
-    padding: 15px;
-    gap: 10px;
-    background: #f8f9fa;
-    justify-content: center;
-}
-
-.thumbnail {
-    width: 80px;
-    height: 60px;
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    border: 3px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}  
-
-.thumbnail:hover {
-    border-color: #3498db;
-    transform: scale(1.05);
-}  
-
-/* ギャラリースライド制御 */
-#gift1:checked ~ .gift-main .gift-images {
-    transform: translateX(0%);
-}
-#gift2:checked ~ .gift-main .gift-images {
-    transform: translateX(-25%);
-}
-
-/* アクティブサムネイル */
-#gift1:checked ~ .gift-thumbnails label[for="gift1"],
-#gift2:checked ~ .gift-thumbnails label[for="gift2"] {
-    border-color: var(--text-color);
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+        .gift-images{
+            width: 200%;
+            height: 440px;
+        }      
+    }
 }

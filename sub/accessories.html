@@ -31,10 +31,9 @@
                 </button>
             </div>
             <nav class="header__nav">
-                <a href="#shopmood">Shop Mood</a>
-                <a href="#gift">Gift</a>
-                <a href="sub/menu.html">Menu</a>
-                <a href="#information">Information</a>
+                <a href="../index.html">Top</a>
+                <!-- <a href="#gift">Gift</a> -->
+                <a href="menu.html">Menu</a>
 
                 <!-- 泡 -->
                 <span class="header__bubble header__bubble--1"></span>
@@ -50,10 +49,76 @@
                         <a href="../index.html">TOP</a>
                     </li>
                     <li class="breadcrumb__item">
-                        <a href="gift.html">GIFT</a>
+                        <a href="accessories.html">GIFT</a>
                     </li>
                 </ol>
             </nav>
+            <div class="pc-container">
+                <div class="pc-item pc-item__1">
+                    <div class="gift-carousel">
+                        <input type="radio" name="gift" id="gift1" checked />
+                        <input type="radio" name="gift" id="gift2" />
+                        <!-- メイン画像表示エリア -->
+                        <div class="gift-main">
+                            <div class="gift-images">
+                                <img
+                                    src="../img/accessories.webp"
+                                    alt="ブレスレット"
+                                    class="gift-image"
+                                />
+                                <img
+                                    src="../img/accessories2.webp"
+                                    alt="テスター"
+                                    class="gift-image"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- サムネイルナビゲーション -->
+                        <div class="gift-thumbnails">
+                            <label for="gift1" class="thumbnail">
+                                <img src="../img/accessories.webp" alt="サムネイル1" />
+                            </label>
+                            <label for="gift2" class="thumbnail">
+                                <img src="../img/accessories2.webp" alt="サムネイル2" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="gift__info">
+                        <p class="gift__brand">Pearl Tide チャーム付きブレスレット <br />５種</p>
+                        <div class="gift__purchase">
+                            <p class="gift__price">￥1,680(税込)</p>
+                            <label for="gift-quantity">種類</label>
+                            <select id="gift-quantity" class="gift__select" name="gift-quantity">
+                                <option value="6">1番</option>
+                                <option value="7">2番</option>
+                                <option value="8">3番</option>
+                                <option value="9">4番</option>
+                                <option value="10">5番</option>
+                            </select>
+                        </div>
+                        <button type="button" class="cart-btn">カートに入れる</button>
+                    </div>
+                </div>
+
+                <div class="pc-item pc-item__2">
+                    <div class="gift-expain">
+                        <h4>商品説明</h4>
+                        <ol>
+                            <li>貝殻</li>
+                            <li>ヒトデ</li>
+                            <li>貝殻ビーズ付き</li>
+                            <li>ヒトデビーズ付き</li>
+                            <li>しずく型チャーム</li>
+                        </ol>
+                    </div>
+                    <div class="gift-spec">
+                        <h4>商品仕様</h4>
+                        <p>長さ約20cm</p>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <a href="#" class="footer__button">

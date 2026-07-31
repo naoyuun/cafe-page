@@ -19,7 +19,7 @@
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
     </head>
-    <body>
+    <body class="giftbody">
         <header class="header">
             <div class="header__inner">
                 <h1 class="header__logo">
@@ -42,7 +42,7 @@
             </nav>
         </header>
         <main class="gifthtml">
-            <p>5000円（税抜）以上ご購入で送料無料</p>
+            <p class="gift__shipping">5000円（税抜）以上ご購入で送料無料</p>
             <nav class="breadcrumb" aria-label="パンくずリスト">
                 <ol class="breadcrumb__list">
                     <li class="breadcrumb__item">
@@ -53,37 +53,131 @@
                     </li>
                 </ol>
             </nav>
-            <!--要確認-->
-            <div class="gift-carousel">
-                <input type="radio" name="gift" id="gift1" checked>
-                <input type="radio" name="gift" id="gift2">           
-                <!-- メイン画像表示エリア -->
-                <div class="gift-main">
-                    <div class="gift-images">
-                        <img src="../img/gift.webp" alt="お菓子" class="gift-image">
-                        <img src="../img/gift2.webp" alt="ラッピング" class="gift-image">
+            <div class="pc-container">
+                <div class="pc-item pc-item__1">
+                    <div class="gift-carousel">
+                        <input type="radio" name="gift" id="gift1" checked />
+                        <input type="radio" name="gift" id="gift2" />
+                        <!-- メイン画像表示エリア -->
+                        <div class="gift-main">
+                            <div class="gift-images">
+                                <img src="../img/gift.webp" alt="お菓子" class="gift-image" />
+                                <img src="../img/gift2.webp" alt="ラッピング" class="gift-image" />
+                            </div>
+                        </div>
+
+                        <!-- サムネイルナビゲーション -->
+                        <div class="gift-thumbnails">
+                            <label for="gift1" class="thumbnail">
+                                <img src="../img/gift.webp" alt="サムネイル1" />
+                            </label>
+                            <label for="gift2" class="thumbnail">
+                                <img src="../img/gift2.webp" alt="サムネイル2" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="gift__info">
+                        <p class="gift__brand">
+                            Pearl Tide オリジナルギフトBOX <br />マドレーヌBOX（9個入）
+                        </p>
+                        <div class="gift__purchase">
+                            <p class="gift__price">￥2,780(税込)</p>
+                            <label for="gift-quantity">数量</label>
+                            <select
+                                id="gift-quantity"
+                                class="gift__select"
+                                name="gift-quantity"
+                                id=""
+                            >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <button type="button" class="cart-btn">カートに入れる</button>
                     </div>
                 </div>
-                
-                <!-- サムネイルナビゲーション -->
-                <div class="gift-thumbnails">
-                    <label for="gift1" class="thumbnail">
-                        <img src="../img/gift.webp" alt="サムネイル1">
-                    </label>
-                    <label for="gift2" class="thumbnail">
-                        <img src="../img/gift2.webp" alt="サムネイル2">
-                    </label>
-                </div>
-            </div>
-            <div>
-                <p>Pearl Tide オリジナルギフトBOX</p>
-                <p>マドレーヌBOX（9個入）</p>
-                <div>
-                    <p>￥2,780(税込)
-                    </p>
+
+                <div class="pc-item pc-item__2">
+                    <div class="gift-expain">
+                        <h4>商品説明</h4>
+                        <p>
+                            ストロベリーフレーバー　４袋 <br />レモンフレーバー　４袋
+                            <br />ブルーベリーフレーバー　１袋 <br />
+                            を詰め合わせたアソートセットです。フルーツの酸味を残したアイシングと、
+                            はちみつをしみこませたマドレーヌ、見た目も華やかなので、ギフトとしてオススメです。
+                        </p>
+                        <p>６個以上ご希望のお客様は電話でお問い合わせください。</p>
+                    </div>
+                    <div class="gift-spec">
+                        <h4>商品仕様</h4>
+                        <table>
+                            <tr>
+                                <th>サイズ（幅×奥行×高さ）</th>
+                                <td>約28×21.5×4.8cm</td>
+                            </tr>
+                            <tr>
+                                <th>賞味期限</th>
+                                <td>
+                                    オンラインでは発送時、賞味期限３０日以上あるものを発送します
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>保存方法</th>
+                                <td>直射日光、高温多湿を避け常温で保存してください</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="gift-kcal">
+                        <p>【特定原材料】小麦、乳、卵、大豆、アーモンド、オレンジ</p>
+                        <p>【栄養成分】１袋あたり</p>
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>エネルギー</th>
+                                    <td>340kcal</td>
+                                </tr>
+                                <tr>
+                                    <th>タンパク質</th>
+                                    <td>2.1g</td>
+                                </tr>
+                                <tr>
+                                    <th>脂質</th>
+                                    <td>14.3g</td>
+                                </tr>
+                                <tr>
+                                    <th>炭水化物</th>
+                                    <td>41.5g</td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>糖質</th>
+                                    <td>39.8g</td>
+                                </tr>
+                                <tr>
+                                    <th>食物繊維</th>
+                                    <td>0.8g</td>
+                                </tr>
+                                <tr>
+                                    <th>食塩相当量</th>
+                                    <td>0.5g</td>
+                                </tr>
+                                <tr>
+                                    <th>お酒</th>
+                                    <td>ラム酒</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
+
         <footer class="footer">
             <a href="#" class="footer__button">
                 <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
