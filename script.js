@@ -39,3 +39,117 @@ if (swiperElement) {
         },
     });
 }
+
+/*商品カート */
+
+/*ローカルストレージ */
+const cartBtn = document.querySelector(".cart-btn");
+
+if (cartBtn) {
+    cartBtn.addEventListener("click", () => {
+        const name = document.querySelector("#product-name").textContent.trim();
+
+        const price = document.querySelector("#product-price").textContent.replace(/[^0-9]/g, "");
+
+        const select = document.querySelector(".gift__select");
+
+        let option = "";
+        let quantity = 1;
+
+        if (select.id === "gift-quantity") {
+            quantity = Number(select.value);
+        } else {
+            option = select.value;
+        }
+
+        const cartItem = {
+            name: name,
+            price: Number(price),
+            option: option,
+            quantity: Number(quantity),
+        };
+
+        // すでにあるカートを取得
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // 商品を追加
+        cart.push(cartItem);
+
+        // 保存
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        console.log(cart);
+
+        alert("カートに追加しました");
+    });
+}
+
+/*カートページ */
+const cartArea = document.querySelector(".cart-item");
+
+if (cartArea) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const totalPrice = document.querySelector("#total-price");
+
+    function displayCart() {
+        cartArea.innerHTML = "";
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+
+            const div = document.createElement("div");
+
+            div.innerHTML = `
+                <p>${item.name}</p>
+                <p>￥${item.price}</p>
+                <p>${item.option}</p>
+
+                <button class="minus" data-index="${index}">
+                    −
+                </button>
+
+                <span>${item.quantity}</span>
+
+                <button class="plus" data-index="${index}">
+                    ＋
+                </button>
+
+                <button class="delete" data-index="${index}">
+                    削除
+                </button>
+            `;
+
+            cartArea.appendChild(div);
+        });
+
+        totalPrice.textContent = total;
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    displayCart();
+
+    // ボタン操作
+    cartArea.addEventListener("click", (e) => {
+        const index = e.target.dataset.index;
+
+        if (e.target.classList.contains("plus")) {
+            cart[index].quantity++;
+        }
+
+        if (e.target.classList.contains("minus")) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            }
+        }
+
+        if (e.target.classList.contains("delete")) {
+            cart.splice(index, 1);
+        }
+
+        displayCart();
+    });
+}

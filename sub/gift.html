@@ -18,6 +18,10 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
     </head>
     <body class="giftbody">
         <header class="header">
@@ -82,11 +86,11 @@
                     </div>
 
                     <div class="gift__info">
-                        <p class="gift__brand">
+                        <p class="gift__brand" id="product-name">
                             Pearl Tide オリジナルギフトBOX <br />マドレーヌBOX（9個入）
                         </p>
                         <div class="gift__purchase">
-                            <p class="gift__price">￥2,780(税込)</p>
+                            <p class="gift__price" id="product-price">￥2,780(税込)</p>
                             <label for="gift-quantity">数量</label>
                             <select id="gift-quantity" class="gift__select" name="gift-quantity">
                                 <option value="1">1</option>
@@ -97,6 +101,7 @@
                             </select>
                         </div>
                         <button type="button" class="cart-btn">カートに入れる</button>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </div>
 

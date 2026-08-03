@@ -18,6 +18,9 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </head>
     <body class="accessoriesbody">
         <header class="header">
@@ -90,19 +93,26 @@
                     </div>
 
                     <div class="gift__info">
-                        <p class="gift__brand">Pearl Tide チャーム付きブレスレット <br />５種</p>
+                        <p class="gift__brand" id="product-name">Pearl Tide チャーム付きブレスレット <br />５種</p>
                         <div class="gift__purchase">
-                            <p class="gift__price">￥1,680(税込)</p>
-                            <label for="gift-quantity">種類</label>
-                            <select id="gift-quantity" class="gift__select" name="gift-quantity">
-                                <option value="6">1番</option>
-                                <option value="7">2番</option>
-                                <option value="8">3番</option>
-                                <option value="9">4番</option>
-                                <option value="10">5番</option>
+                            <p class="gift__price" id="product-price">￥1,680(税込)</p>
+
+                            <label for="accessories-type">種類</label>
+
+                            <select
+                                id="accessories-type"
+                                class="gift__select"
+                                name="accessories-type"
+                            >
+                                <option value="貝殻">1番</option>
+                                <option value="ヒトデ">2番</option>
+                                <option value="貝殻ビーズ付き">3番</option>
+                                <option value="ヒトデビーズ付き">4番</option>
+                                <option value="しずく型チャーム">5番</option>
                             </select>
                         </div>
                         <button type="button" class="cart-btn">カートに入れる</button>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> 
                     </div>
                 </div>
 

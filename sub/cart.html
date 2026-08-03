@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="icon" href="../img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300&family=Noto+Serif+JP&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="cart">
+        <header class="header">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <img src="../img/logo.webp" alt="logo" />
+                </h1>
+                <!--ハンバーガ　ナビ追加-->
+                <button class="header__hamburger" aria-label="メニュー">
+                    <img src="../img/icon.webp" alt="menu icon" />
+                </button>
+            </div>
+            <nav class="header__nav">
+                <a href="../index.html">Top</a>
+                <a href="gift.html" aria-current="page">Gift</a>
+                <ul>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="gift.html">GiftBox</a></li>
+                </ul>
+                <a href="menu.html">Menu</a>
+
+                <!-- 泡 -->
+                <span class="header__bubble header__bubble--1"></span>
+                <span class="header__bubble header__bubble--2"></span>
+                <span class="header__bubble header__bubble--3"></span>
+            </nav>
+        </header>
+        <main class="cart">
+            <h2>Shopping Cart</h2>
+
+            <div class="cart-item">
+                <!-- <p id="cart-name"></p>
+
+                <p id="cart-price"></p>
+
+                <p id="cart-option"></p> -->
+            </div>
+            <div class="cart-total">合計：<span id="total-price">0</span>円</div>
+        </main>
+        <footer class="footer">
+            <a href="#" class="footer__button">
+                <img src="../img/icons8-インスタグラム-48.png" alt="insta" />
+            </a>
+            <p class="footer__copy">&copy;Pearl Tide Cafe-HP</p>
+        </footer>
+        <script src="../script.js"></script>
+    </body>
+</html>
