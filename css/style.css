@@ -115,7 +115,6 @@ h2 {
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
 
     width: 270px;
     padding: 40px;
@@ -137,6 +136,11 @@ h2 {
     transform: translateY(-20px) scale(0.96);
 
     transition: 0.45s;
+
+    li {
+        list-style: circle;
+        padding-left: none;
+    }
 }
 
 .header__nav.open {
@@ -147,17 +151,41 @@ h2 {
 
 .header__nav a {
     position: relative;
+    margin-top: 24px;
 
     color: var(--text);
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     text-decoration: none;
 
     transition: var(--transition);
+}
+.header__nav ul li a {
+    display: block;
+    position: relative;
+
+    transition: var(--transition);
+}
+
+a:first-child {
+    margin-top: 0;
+}
+a:nth-child(4) {
+    margin-top: -8px;
+}
+
+.header__nav li a {
+    font-size: 1.2rem;
 }
 
 .header__nav a:hover {
     color: var(--main);
     transform: translateX(10px);
+}
+
+a[aria-current="page"] {
+    pointer-events: none;
+    cursor: default;
+    color: #005c63;
 }
 
 /*==========================
@@ -283,10 +311,6 @@ h2 {
     margin-right: 8px;
 
     color: var(--text);
-
-    @media screen and (width >=768px) {
-        margin-right: 48px;
-    }
 }
 
 @keyframes cardfloat {
@@ -345,11 +369,6 @@ h2 {
 
     box-shadow: var(--glass-shadow);
     border-radius: 10px;
-
-    @media screen and (width >=768px) {
-        width: 50%;
-        margin-inline: auto;
-    }
 }
 
 .menu-table__item {
@@ -379,12 +398,6 @@ h2 {
     margin: 8px;
     text-indent: 0.5rem;
     color: var(--text);
-
-    @media screen and (width >=768px) {
-        width: 50%;
-        text-align: left;
-        margin-inline: auto;
-    }
 }
 
 /*==========================
@@ -463,7 +476,6 @@ h2 {
 
     position: absolute;
     inset: 0 auto 0 -120%;
-
     width: 60%;
 
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
@@ -494,7 +506,6 @@ h2 {
     position: absolute;
     top: 8px;
     left: 0;
-
     width: 100%;
 
     z-index: 90;
@@ -591,7 +602,6 @@ h2 {
     line-height: 1.8;
     background: var(--accent);
     border-radius: 100vmax;
-
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
 
     img {
@@ -632,9 +642,11 @@ h2 {
     .accessories__link,
     .gift__link {
         text-decoration: none;
-        margin: 8px;
         width: 50vw;
+        margin: 8px;
+
         box-shadow: var(--shadow);
+        border-radius: 0 0 10px 10px;
 
         figure {
             margin: 0;
@@ -673,10 +685,10 @@ h2 {
     .menu__item {
         margin-inline: auto;
         box-shadow: var(--shadow);
+        border-radius: 0 0 10px 10px;
     }
     .menu__caption {
         height: 46px;
-
         padding-right: 8px;
 
         text-align: right;
@@ -765,7 +777,7 @@ h2 {
 
         font-weight: lighter;
     }
-
+    /*パンくず*/
     .breadcrumb__list {
         display: flex;
         align-items: center;
@@ -809,18 +821,14 @@ h2 {
         margin: 0;
         background-color: var(--accent);
         margin-inline: calc(50% - 50vw);
-
-        @media screen and (width >=768px) {
-            margin-top: 96px;
-        }
     }
 }
 
 .gift-carousel {
     margin-inline: auto;
     margin: 8px 4px 0 4px;
-    background: white;
     overflow: hidden;
+    background: white;
 }
 
 .gift-carousel input[type="radio"] {
@@ -836,6 +844,7 @@ h2 {
     display: flex;
     width: 400%;
     height: 100%;
+
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -856,10 +865,12 @@ h2 {
 .thumbnail {
     width: 80px;
     height: 60px;
-    border-radius: 6px;
     overflow: hidden;
-    cursor: pointer;
+
     border: 3px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+
     transition: all 0.3s ease;
 }
 
@@ -937,7 +948,6 @@ button:hover {
     margin: 16px 4px 4px 4px;
 
     background-color: white;
-
     border-radius: 10px;
 
     p {
@@ -973,12 +983,71 @@ button:hover {
 
 /*タブレット*/
 @media screen and (width >=768px) {
-
-    .home{
-        h2{
+    .home {
+        h2 {
             padding-top: 70px;
         }
     }
+    .menu-3-p {
+        margin-right: 48px;
+    }
+
+    .home,
+    .menu {
+        ul {
+            display: inline-flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            width: 28.4vw;
+        }
+        li {
+            display: block;
+            list-style: none;
+        }
+        a {
+            font-style: 1.1rem;
+            width: 14.2vw;
+        }
+        ul li a {
+            width: 14.2vw;
+        }
+    }
+    .home {
+        ul{
+            width: 33.2vw;
+        }
+        a {
+            font-style: 1.1rem;
+            width: 16.6vw;
+        }
+        ul li a {
+            width: 16.6vw;
+        }
+    }
+
+    .giftbody,
+    .accessoriesbody {
+        ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            width: 50vw;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            font-style: 1.1rem;
+        }
+        a:nth-child(2) {
+            display: none;
+        }
+        p {
+            margin-top: 96px;
+        }
+    }
+
     .fv {
         height: 100vh;
     }
@@ -990,7 +1059,6 @@ button:hover {
         position: fixed;
         top: 8px;
         right: 0;
-
         width: 100vw;
     }
     .header__nav {
@@ -1010,8 +1078,15 @@ button:hover {
 
         a {
             width: 25vw;
+            margin-top: 0;
+
+            font-size: 1.1rem;
             text-align: center;
         }
+
+        /* ul{
+            display: none;
+        } */
     }
 
     .mood__flex {
@@ -1031,8 +1106,8 @@ button:hover {
     }
 
     .menu__item {
-        margin-inline: auto;
         max-width: 700px;
+        margin-inline: auto;
     }
 
     .information__list {
@@ -1040,12 +1115,22 @@ button:hover {
     }
 
     .menu {
-        h3{
+        h3 {
             padding-top: 70px;
         }
         .breadcrumb {
             margin-top: 96px;
         }
+    }
+    .menu-table {
+        width: 50%;
+        margin-inline: auto;
+    }
+
+    .menu-p {
+        width: 50%;
+        margin-inline: auto;
+        text-align: left;
     }
 
     .gift-expain,
@@ -1053,37 +1138,39 @@ button:hover {
     .gift-kcal {
         padding: 16px;
         p {
-            padding: 0  0 0;
+            padding: 0 0 0;
             margin: 16px;
             margin-inline: auto;
         }
-        table{
+        table {
             margin-inline: auto;
         }
     }
 
-    .gift__info{
-        p{
+    .gift__info {
+        p {
             padding: 0 32px;
             margin: 0 0 24px 0;
+
+            font-size: 1.5rem;
         }
     }
 }
 
 /*PC*/
 @media screen and (width >=1024px) {
-    .pc-container{
+    .pc-container {
         display: flex;
     }
-    .pc-item{
+    .pc-item {
         width: 50%;
     }
-    .pc-item__1{
+    .pc-item__1 {
         margin-top: 8px;
 
-        .gift-images{
+        .gift-images {
             width: 200%;
             height: 440px;
-        }      
+        }
     }
 }

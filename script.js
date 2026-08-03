@@ -20,18 +20,22 @@ hamburger.addEventListener("click", () => {
 
 /*header home*/
 /*swiper */
-const swiper = new Swiper(".swiper", {
-    effect: "fade",
-    loop: true,
+const swiperElement = document.querySelector(".swiper");
 
-    speed: 1200,
+if (swiperElement) {
+    const swiper = new Swiper(".swiper", {
+        effect: "fade",
+        loop: true,
 
-    fadeEffect: {
-        crossFade: true,
-    },
+        speed: 1200,
 
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-});
+        fadeEffect: {
+            crossFade: true,
+        },
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
+}
