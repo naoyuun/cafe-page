@@ -707,7 +707,7 @@ a[aria-current="page"] {
 .information__list {
     width: 80%; /* 高さを固定 */
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto; /* 縦だけスクロール */
     overflow-x: hidden;
 
     padding: 10px;
@@ -1258,5 +1258,13 @@ button:hover,
             width: 200%;
             height: 440px;
         }
+    }
+}
+
+@media screen and (width <=1024px){
+    .information__list {
+        height: 300px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
