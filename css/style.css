@@ -423,17 +423,24 @@ a[aria-current="page"] {
         30px 30px,
         40px 40px,
         cover;
+
+    text-align: center;
+    .footer__button {
+        display: inline-block;
+    }
+
+    .footer__button img {
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin-inline: auto;
+    }
+    .footer__copy {
+        color: var(--text);
+        text-indent: 1rem;
+    }
 }
 
-.footer img {
-    display: block;
-    margin-inline: auto;
-}
-
-.footer__copy {
-    color: var(--text);
-    text-indent: 1rem;
-}
 /*ぼやかし*/
 .footer::before {
     content: "";
@@ -1066,6 +1073,56 @@ button:hover,
         font-size: 1.3rem;
     }
 }
+
+/*モーダル*/
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    z-index: 100;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal__content {
+    width: 80%;
+    max-width: 400px;
+
+    padding: 40px 30px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.modal__button {
+    display: block;
+
+    margin-top: 30px;
+
+    padding: 12px;
+
+    background: #01bbc8;
+
+    color: white;
+
+    border-radius: 30px;
+}
+
+.modal__close {
+    margin-top: 15px;
+}
 /*タブレット*/
 @media screen and (width >=768px) {
     .home {
@@ -1130,7 +1187,13 @@ button:hover,
             display: none;
         }
         p {
-            margin-top: 96px;
+            margin-top: 60px;
+        }
+
+        .footer {
+            p {
+                margin-top: 16px;
+            }
         }
     }
 
@@ -1265,13 +1328,13 @@ button:hover,
     }
 }
 
-@media screen and (width <=1024px){
+@media screen and (width <=1024px) {
     .information__list {
         height: 300px;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
-    .menu{
-        margin: 0 8px;       
+    .menu {
+        margin: 0 8px;
     }
 }

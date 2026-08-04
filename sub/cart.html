@@ -51,7 +51,22 @@
                 <p id="cart-option"></p> -->
             </div>
             <div class="cart-total">合計：<span id="total-price">0</span>円</div>
-            <a href="checkout.html" class="cart-button__goal">お会計に進む</a>
+            
+            <button class="cart-button__goal" id="checkout-button">お会計に進む</button>
+
+            <!-- モーダル -->
+            <div class="modal" id="checkout-modal">
+                <div class="modal__content">
+                    <p>
+                        デモサイトのため<br />
+                        決済は行われません
+                    </p>
+
+                    <a href="../index.html" class="modal__button"> TOPへ戻る </a>
+
+                    <button class="modal__close" id="modal-close">閉じる</button>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <a href="#" class="footer__button">

@@ -155,3 +155,16 @@ if (cartArea) {
         displayCart();
     });
 }
+
+/*モーダル */
+const checkoutButton = document.querySelector("#checkout-button");
+const modal = document.querySelector("#checkout-modal");
+const closeButton = document.querySelector("#modal-close");
+
+checkoutButton.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+closeButton.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
