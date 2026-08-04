@@ -107,8 +107,9 @@ if (cartArea) {
                 <p>￥${item.price}</p>
                 <p>${item.option}</p>
 
+                <div class="cart-flex">
                 <button class="minus" data-index="${index}">
-                    −
+                    －
                 </button>
 
                 <span>${item.quantity}</span>
@@ -120,6 +121,7 @@ if (cartArea) {
                 <button class="delete" data-index="${index}">
                     削除
                 </button>
+                <div>
             `;
 
             cartArea.appendChild(div);

@@ -4,7 +4,6 @@
     --text: #006b73;
     --text2: #fff;
     --main: #02c6c4;
-    --base: #c2dbd8;
     --page: #eff0f4;
     --accent: #e8dedc;
 
@@ -138,7 +137,7 @@ h2 {
     transition: 0.45s;
 
     li {
-        list-style: circle;
+        list-style: none;
         padding-left: none;
     }
 }
@@ -344,6 +343,7 @@ a[aria-current="page"] {
 
     display: flex;
     flex-direction: column;
+    text-indent: 0.5rem;
 }
 
 .price {
@@ -386,7 +386,10 @@ a[aria-current="page"] {
 
     @media screen and (width >=768px) {
         grid-template-columns: repeat(4, 1fr);
+
+        max-width: 1000px;
         margin: 48px;
+        margin-inline: auto;
     }
 }
 
@@ -916,6 +919,10 @@ a[aria-current="page"] {
         background: none;
         text-align: left;
     }
+    h2 {
+        color: var(--text);
+        font-size: 1.5rem;
+    }
 }
 .gift__purchase {
     display: flex;
@@ -937,7 +944,8 @@ button {
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.541);
 }
-button:hover {
+button:hover,
+.fa-solid:hover {
     opacity: 0.8;
 }
 
@@ -963,6 +971,9 @@ button:hover {
     td {
         border-bottom: 1px solid gray;
     }
+    ul {
+        flex-direction: column;
+    }
 }
 
 .gift-kcal {
@@ -981,10 +992,77 @@ button:hover {
     }
 }
 
+.fa-solid {
+    padding: 8px;
+
+    color: white;
+    background-color: var(--main);
+
+    border-radius: 100vmax;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.319);
+}
+
 /*カート*/
-.cart {
+.cart-main {
+    max-width: 375px;
+    margin-inline: auto;
     h2 {
         padding-top: 60px;
+    }
+
+    .cart-item {
+        p {
+            margin-top: 16px;
+        }
+        padding: 4px 16px;
+        margin: 16px;
+
+        background-color: rgba(255, 255, 255, 0.577);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        box-shadow: var(--glass-shadow);
+        border-radius: 10px;
+        button {
+            width: 30px;
+            height: 30px;
+            margin: 16px;
+            color: var(--text);
+            background-color: white;
+            border: 1px solid #005c63;
+            border-radius: 100vmax;
+
+            font-weight: bold;
+            text-align: center;
+        }
+        .cart-flex {
+            display: flex;
+        }
+        button:nth-child(4) {
+            width: 50px;
+            margin-left: 90px;
+        }
+    }
+    span {
+        margin-top: 12px;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .cart-total {
+        margin-left: 16px;
+    }
+    .cart-button__goal {
+        text-decoration: none;
+        padding: 4px 8px;
+        margin-left: 200px;
+        margin-right: 16px;
+
+        color: white;
+        background-color: #005c63;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.464);
+        border-radius: 30px;
+
+        font-size: 1.3rem;
     }
 }
 /*タブレット*/
