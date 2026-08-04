@@ -4,7 +4,7 @@
     --text: #006b73;
     --text2: #fff;
     --main: #02c6c4;
-    --page: #eff0f4;
+    --base: #eff0f4;
     --accent: #e8dedc;
 
     --title: "IBM Plex Serif", serif;
@@ -338,7 +338,7 @@ a[aria-current="page"] {
 .menu-card__caption {
     height: 70px;
 
-    background: var(--page);
+    background: var(--base);
     border-radius: 0 0 10px 10px;
 
     display: flex;
@@ -669,7 +669,7 @@ a[aria-current="page"] {
     .gift__caption {
         height: 70px;
 
-        background: var(--page);
+        background: var(--base);
         border-radius: 0 0 10px 10px;
 
         display: flex;
@@ -702,7 +702,7 @@ a[aria-current="page"] {
         padding-right: 8px;
 
         text-align: right;
-        background: var(--page);
+        background: var(--base);
         border-radius: 0 0 10px 10px;
     }
 }
@@ -720,7 +720,7 @@ a[aria-current="page"] {
     padding: 10px;
     margin-inline: auto;
 
-    background-color: var(--page);
+    background-color: var(--base);
     box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
 
     img {
@@ -774,7 +774,7 @@ a[aria-current="page"] {
 .accessorieshtml {
     .breadcrumb {
         margin: 0;
-        background-color: var(--page);
+        background-color: var(--base);
         margin-inline: calc(50% - 50vw);
     }
     h4 {
@@ -782,7 +782,7 @@ a[aria-current="page"] {
         margin-top: 0;
 
         color: var(--text);
-        background-color: var(--page);
+        background-color: var(--base);
         border-radius: 10px;
 
         font-weight: lighter;
