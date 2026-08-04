@@ -1011,8 +1011,10 @@ button:hover,
 }
 
 /*カート*/
+
 .cart-main {
     max-width: 375px;
+    min-height: 40vw;
     margin-inline: auto;
     h2 {
         padding-top: 60px;
@@ -1197,8 +1199,8 @@ button:hover,
         }
     }
     .gifthtml,
-    .accessorieshtml{
-        p:first-child{
+    .accessorieshtml {
+        p:first-child {
             margin-top: 96px;
         }
     }
