@@ -1192,7 +1192,11 @@ button:hover,
     }
 
     .menu__item {
-        max-width: 700px;
+        max-width: 900px;
+    }
+
+    .lunch__item {
+        width: 50%;
         margin-inline: auto;
     }
 
@@ -1264,7 +1268,10 @@ button:hover,
 @media screen and (width <=1024px){
     .information__list {
         height: 300px;
-        overflow-y: auto;
+        overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
+    }
+    .menu{
+        margin: 0 8px;       
     }
 }
