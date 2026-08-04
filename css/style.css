@@ -707,7 +707,7 @@ a[aria-current="page"] {
 .information__list {
     width: 80%; /* 高さを固定 */
     height: 300px;
-    overflow-y: auto; /* 縦だけスクロール */
+    overflow-y: scroll;
     overflow-x: hidden;
 
     padding: 10px;
@@ -972,6 +972,7 @@ button:hover,
         border-bottom: 1px solid gray;
     }
     ul {
+        list-style: none;
         flex-direction: column;
     }
 }
