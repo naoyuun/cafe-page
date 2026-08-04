@@ -1196,6 +1196,12 @@ button:hover,
             }
         }
     }
+    .gifthtml,
+    .accessorieshtml{
+        p:first-child{
+            margin-top: 96px;
+        }
+    }
 
     .fv {
         height: 100vh;
