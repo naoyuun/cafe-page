@@ -833,14 +833,14 @@ a[aria-current="page"] {
     }
 }
 
-.gift-carousel {
+.gift__carousel {
     margin-inline: auto;
     margin: 8px 4px 0 4px;
     overflow: hidden;
     background: white;
 }
 
-.gift-carousel input[type="radio"] {
+.gift__carousel input[type="radio"] {
     display: none;
 }
 
@@ -955,9 +955,9 @@ button:hover,
     opacity: 0.8;
 }
 
-.gift-expain,
-.gift-spec,
-.gift-kcal {
+.gift__description,
+.gift__spec,
+.gift__kcal {
     padding: 8px;
     margin: 16px 4px 4px 4px;
 
@@ -983,7 +983,7 @@ button:hover,
     }
 }
 
-.gift-kcal {
+.gift__kcal {
     div {
         display: flex;
     }
@@ -1023,6 +1023,7 @@ button:hover,
         p {
             margin-top: 16px;
         }
+
         padding: 4px 16px;
         margin: 16px;
 
@@ -1032,6 +1033,7 @@ button:hover,
 
         box-shadow: var(--glass-shadow);
         border-radius: 10px;
+
         button {
             width: 30px;
             height: 30px;
@@ -1337,9 +1339,9 @@ button:hover,
         text-align: left;
     }
 
-    .gift-expain,
-    .gift-spec,
-    .gift-kcal {
+    .gift__description,
+    .gift__spec,
+    .gift__kcal {
         padding: 16px;
         p {
             padding: 0 0 0;
@@ -1367,13 +1369,13 @@ button:hover,
 
 /*PC*/
 @media screen and (width >=1024px) {
-    .pc-container {
+    .product-container {
         display: flex;
     }
     .pc-item {
         width: 50%;
     }
-    .pc-item__1 {
+    .product-main {
         margin-top: 8px;
 
         .gift-images {
