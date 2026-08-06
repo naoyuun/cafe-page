@@ -80,7 +80,17 @@ if (cartBtn) {
 
         console.log(cart);
 
-        alert("カートに追加しました");
+        const message = document.createElement("div");
+
+        message.textContent = "カートに追加しました";
+
+        message.className = "cart-message";
+
+        document.body.appendChild(message);
+
+        setTimeout(() => {
+            message.remove();
+        }, 2000);
     });
 }
 

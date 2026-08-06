@@ -293,13 +293,6 @@ a[aria-current="page"] {
     border-radius: 10px 10px 0 0;
 }
 
-.lunch__item {
-    @media screen and (width >=768px) {
-        width: 50%;
-        margin-inline: auto;
-    }
-}
-
 .drink__item img,
 .sweets__item img {
     aspect-ratio: 2/3;
@@ -344,6 +337,7 @@ a[aria-current="page"] {
     display: flex;
     flex-direction: column;
     text-indent: 0.5rem;
+    text-align: left;
 }
 
 .price {
@@ -377,7 +371,7 @@ a[aria-current="page"] {
 }
 
 /*==========================
-    Grid
+    Grid-増やすならここだけいじる
 ==========================*/
 
 .menu-grid {
@@ -427,13 +421,14 @@ a[aria-current="page"] {
     text-align: center;
     .footer__button {
         display: inline-block;
+        width: fit-content;
     }
 
     .footer__button img {
         display: block;
         width: 48px;
         height: 48px;
-        margin-inline: auto;
+        margin: 0;
     }
     .footer__copy {
         color: var(--text);
@@ -683,17 +678,21 @@ a[aria-current="page"] {
 }
 
 .menu {
+    text-align: center;
+
     h2 {
         margin-bottom: 32px;
         border-bottom: 2px solid #fff;
 
         line-height: 1.4;
     }
-    a {
+    .menu__link {
+        display: inline-block;
+        width: fit-content;
         text-decoration: none;
     }
     .menu__item {
-        margin-inline: auto;
+        margin: 0;
         box-shadow: var(--shadow);
         border-radius: 0 0 10px 10px;
     }
@@ -772,22 +771,22 @@ a[aria-current="page"] {
 .menu,
 .gifthtml,
 .accessorieshtml {
+    h4 {
+        padding: 4px;
+        margin-top: 0;
+        
+        color: var(--text);
+        background-color: var(--base);
+        border-radius: 10px;
+        
+        font-weight: lighter;
+    }
+    /*パンくず*/
     .breadcrumb {
         margin: 0;
         background-color: var(--base);
         margin-inline: calc(50% - 50vw);
     }
-    h4 {
-        padding: 4px;
-        margin-top: 0;
-
-        color: var(--text);
-        background-color: var(--base);
-        border-radius: 10px;
-
-        font-weight: lighter;
-    }
-    /*パンくず*/
     .breadcrumb__list {
         display: flex;
         align-items: center;
@@ -1072,7 +1071,7 @@ button:hover,
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.464);
         border-radius: 30px;
 
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -1115,15 +1114,50 @@ button:hover,
 
     padding: 12px;
 
-    background: #01bbc8;
-
-    color: white;
+    background: var(--accent);
 
     border-radius: 30px;
+    text-decoration: none;
+}
+
+.modal__button:hover {
+    opacity: 0.8;
 }
 
 .modal__close {
     margin-top: 15px;
+}
+
+/*トースト*/
+.cart-message {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 15px 30px;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    color: #006b73;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 /*タブレット*/
 @media screen and (width >=768px) {
@@ -1262,8 +1296,12 @@ button:hover,
         gap: 40px;
     }
 
+    .menu__list {
+        display: inline-block;
+        width: fit-content;
+    }
     .menu__item {
-        max-width: 900px;
+        max-width: 700px;
     }
 
     .lunch__item {
@@ -1287,6 +1325,11 @@ button:hover,
         width: 50%;
         margin-inline: auto;
     }
+    .lunch__item {
+        width: 50%;
+        margin-inline: auto;
+    }
+
 
     .menu-p {
         width: 50%;
@@ -1315,6 +1358,10 @@ button:hover,
 
             font-size: 1.5rem;
         }
+    }
+
+    .cart-message {
+        top: 100px;
     }
 }
 
