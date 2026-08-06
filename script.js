@@ -43,7 +43,7 @@ if (swiperElement) {
 /*商品カート */
 
 /*ローカルストレージ */
-const cartBtn = document.querySelector(".cart-btn");
+const cartBtn = document.querySelector(".gift__cart-btn");
 
 if (cartBtn) {
     cartBtn.addEventListener("click", () => {
